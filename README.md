@@ -48,7 +48,7 @@ Steps
 Clone this repository:
 bash
 Copy code
-git clone https://github.com/your-repo-name/offline-coding-exam-platform.git
+git clone https://github.com/Nidhi-Bhardwaj11/offline-coding-exam-platform
 Navigate to the project directory:
 bash
 Copy code
