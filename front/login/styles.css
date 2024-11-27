@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Belanosima&family=Rubik+Vinyl&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  font-family: "Belanosima", sans-serif;
+  background-color: rgb(244, 135, 244);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: "Rubik Vinyl", sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  color: #333;
+}
+
+h1 span {
+  display: inline-block;
+  font-family: "Grand Hotel", cursive;
+  font-size: 6rem;
+  color: #47fffc;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+  transform: perspective(500px) rotateX(10deg) rotateY(5deg);
+}
+
+.f-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.f-row {
+  display: flex;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 20px;
+}
+
+.mt-40 {
+  margin-top: 50px;
+}
+
+.mb-10 {
+  margin-bottom: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-30 {
+  margin-bottom: 10px;
+}
+
+.mb-40 {
+  margin-bottom: 20px;
+}
+
+.mrnoob-container {
+  width: 500px;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  background-color: rgba(105, 237, 213, 0.821);
+  box-shadow: 1px 1px 20px rgb(228, 228, 228);
+  border-radius: 25px;
+}
+label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.284);
+}
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(70, 228, 31);
+  box-shadow: 2px 2px 20px rgba(115, 255, 0, 0.636);
+  z-index: 100;
+  margin: auto;
+  margin-left: -50px;
+  border-radius: 25px;
+}
+
+.square h1 {
+  text-align: center;
+  color: white;
+}
+
+.mrnoob-hover-fill-button {
+  display: flex;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgb(200, 17, 207);
+  background-color: white;
+  font-family: "Belanosima", sans-serif;
+  cursor: pointer;
+  align-items: center;
+  justify-content: left;
+}
+
+.color-fill {
+  position: absolute;
+  margin-left: -7px;
+  width: 100px;
+  height: 1px;
+  background-color: rgba(231, 121, 218, 0.941);
+  visibility: hidden;
+}
+
+.mrnoob-hover-fill-button:hover .color-fill {
+  visibility: visible;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  transition: all 0.5s;
+  background-color: rgb(0, 255, 17);
+}
+
+.mrnoob-hover-fill-button:hover {
+  box-shadow: 1px 1px 20px orange;
+  transition: all 1s;
+}
+
+.mrnoob-hover-fill-button:hover p {
+  color: white;
+  transition: all 0.3s;
+}
+
+.mrnoob-hover-fill-button p {
+  margin: auto;
+  font-size: larger;
+  z-index: 10;
+}
+
+.form-container {
+  margin-right: 50px;
+  width: 50%;
+}
+
+.mrnoob-input {
+  all: unset;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.259);
+  padding-bottom: 5px;
+  background-color: white;
+  font-size: medium;
+  font-weight: 200 !important;
+  width: 90%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.mrnoob-password {
+  width: 100%;
+}
+
+.mrnoob-password:hover .eye-icon {
+  visibility: visible;
+}
+
+.eye-icon {
+  visibility: hidden;
+  z-index: 100;
+  margin-left: 10px;
+}
+
+.eye-icon:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    font-family: "Belanosima", sans-serif;
+    background-color: lightpink;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mrnoob-container {
+    width: 80%;
+    height: 350px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 20px rgb(228, 228, 228);
+    border-radius: 25px;
+  }
+
+  .square {
+    width: 150px;
+    height: 150px;
+    background-color: orange;
+    box-shadow: 1px 1px 20px orange;
+    z-index: 100;
+    margin: auto;
+    margin-top: -50px;
+    border-radius: 25px;
+  }
+
+  .form-container {
+    margin: auto;
+    width: 80%;
+    height: 50%;
+  }
+
+  .mrnoob-hover-fill-button {
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(0, 255, 115);
+    background-color: white;
+    font-family: "Belanosima", sans-serif;
+    cursor: pointer;
+    align-items: center;
+    justify-content: left;
+  }
+}
+
+.disclaimer {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  margin-left: auto;
+  right: 0;
+  margin-right: auto;
+  width: fit-content;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.disclaimer a {
+  text-decoration: none;
+  color: #202020;
+  font-family: "Kaushan Script", cursive;
+  font-weight: 900;
+}
+
+.disclaimer a:hover {
+  text-decoration: overline;
+}

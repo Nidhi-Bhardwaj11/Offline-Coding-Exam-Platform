@@ -1,0 +1,71 @@
+[
+  {
+    "title": "Two Sum",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [2, 7, 11, 15],
+          "target": 9
+        },
+        "output": [0, 1]
+      },
+      {
+        "input": {
+          "nums": [3, 2, 4],
+          "target": 6
+        },
+        "output": [1, 2]
+      },
+      {
+        "input": {
+          "nums": [1, 5, 7, 2],
+          "target": 9
+        },
+        "output": [2, 3]
+      },
+      {
+        "input": {
+          "nums": [0, -1, 2, -3, 1],
+          "target": -2
+        },
+        "output": [3, 4]
+      },
+      {
+        "input": {
+          "nums": [10, 20, 10, 4, 50, 30],
+          "target": 50
+        },
+        "output": [1, 5]
+      },
+      {
+        "input": {
+          "nums": [1, 2, 3, 9, 5],
+          "target": 7
+        },
+        "output": [1, 4]
+      },
+      {
+        "input": {
+          "nums": [15, 12, 9, 2],
+          "target": 17
+        },
+        "output": [0, 3]
+      },
+      {
+        "input": {
+          "nums": [-3, 4, 3, 90],
+          "target": 0
+        },
+        "output": [0, 2]
+      },
+      {
+        "input": {
+          "nums": [1, 1, 1, 1, 1, 1],
+          "target": 2
+        },
+        "output": [0, 1]
+      }
+    ]
+  }
+]
+  

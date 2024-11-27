@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐈 Welcome to CodeKitty</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="title-container">
+        <h1>🐈 Welcome to <span class="td-title">CodeKitty</span></h1>
+    </div>
+
+    <div class="mrnoob-container">
+        <div class="square">
+            <h1>Login</h1>
+        </div>
+        <form class="f-col m-auto form-container" onsubmit="handleLogin(event)">
+            <label class="mb-10">Roll No.</label>
+            <input class="mrnoob-input" type="text" name="Roll" id="rollNo" required>
+            <label class="mb-10 mt-20">Password</label>
+            <div class="mrnoob-password f-row">
+                <input class="m-auto mrnoob-input" type="password" name="password" id="password" required>
+                <img class="m-auto eye-icon" width="18" height="18" 
+                     src="visible.png" 
+                     alt="visible" 
+                     onclick="toggle()" />
+            </div>
+
+            <button class="mt-40 m-auto mrnoob-hover-fill-button" type="submit">
+                <div class="color-fill"></div>
+                <p>Login</p>
+            </button>
+        </form>
+    </div>
+    <p class="disclaimer">
+        <a href="https://github.com/XMrNooBX" target="_blank">MrNooB</a>
+    </p>
+
+    <script>
+        function toggle() {
+            var passwordInput = document.getElementById('password');
+            var eyeIcon = document.querySelector('.eye-icon');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.src = 'invisible.png'; 
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.src = 'visible.png';
+            }
+        }
+
+        async function handleLogin(event) {
+    event.preventDefault();
+
+    // Get input values
+    const rollNo = document.getElementById('rollNo').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    // Input validation
+    if (!rollNo || !password) {
+        alert("Please enter both username and password.");
+        return;
+    }
+
+    try {
+        // Send login request
+        const response = await fetch('http://192.168.1.7:5000/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: rollNo,
+                password: password
+            })
+        });
+
+        // Process the response
+        const result = await response.json();
+        if (response.ok) {
+            // Redirect to the URL returned from the backend
+            window.location.href = result.url;
+        } else {
+            // Show error message
+            alert(result.message);
+        }
+    } catch (error) {
+        // Handle fetch errors
+        console.error("An error occurred:", error);
+        alert("An unexpected error occurred. Please try again later.");
+    }
+}
+    </script>
+</body>
+</html>
